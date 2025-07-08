@@ -1,0 +1,1 @@
+{{-- Este arquivo está vazio para remover o X do empty state --}} 
