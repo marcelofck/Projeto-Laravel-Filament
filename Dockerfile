@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
     npm \
     nodejs \
     libicu-dev \
-    libzip-dev
+    libzip-dev \
+    pkg-config
 
 # Instale extensões PHP (agora incluindo intl e zip)
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd intl zip
