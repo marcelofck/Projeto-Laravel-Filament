@@ -10,10 +10,11 @@ RUN apt-get update && apt-get install -y \
     zip \
     curl \
     npm \
-    nodejs
+    nodejs \
+    libicu-dev
 
-# Instale extensões PHP
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+# Instale extensões PHP (agora incluindo intl e zip)
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd intl zip
 
 # Instale Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
