@@ -20,6 +20,8 @@ return new class extends Migration
             $table->enum('status', ['ativo', 'inativo', 'manutencao'])->default('ativo');
             $table->string('localizacao')->nullable();
             $table->text('descricao')->nullable();
+            $table->text('dicas_configuracao')->nullable();
+            $table->text('anotacoes')->nullable();
             $table->timestamps();
         });
     }

@@ -15,9 +15,9 @@ class Roteador extends Model
         'ip_address',
         'modelo',
         'fabricante',
-        'status',
-        'localizacao',
         'descricao',
+        'dicas_configuracao',
+        'anotacoes',
     ];
 
     protected $casts = [

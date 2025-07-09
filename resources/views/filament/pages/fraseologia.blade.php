@@ -95,7 +95,7 @@
                 <div class="text-center p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
                     <h3 class="font-medium text-yellow-800 dark:text-yellow-200">Suporte Externo</h3>
                     <p class="text-sm text-yellow-600 dark:text-yellow-300">Segunda a Sexta: 08h às 18h</p>
-                    <p class="text-sm text-yellow-600 dark:text-yellow-300">Finais de semana: 08h às 12h</p>
+                    <p class="text-sm text-yellow-600 dark:text-yellow-300">Finais de semana: 08h às 18h</p>
                 </div>
             </div>
         </div>
@@ -105,23 +105,14 @@
             <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 📞 Contatos Importantes
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 gap-4">
                 <div class="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div class="flex-shrink-0">
                         <span class="text-2xl">📱</span>
                     </div>
                     <div>
-                        <h3 class="font-medium text-gray-900 dark:text-white">WhatsApp Suporte</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">(17) 99999-9999</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <div class="flex-shrink-0">
-                        <span class="text-2xl">📧</span>
-                    </div>
-                    <div>
-                        <h3 class="font-medium text-gray-900 dark:text-white">E-mail</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">suporte@netrubi.com.br</p>
+                        <h3 class="font-medium text-gray-900 dark:text-white">Contato</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Telefone/Whatsapp 0800-774-7878 opção Suporte Técnico</p>
                     </div>
                 </div>
             </div>

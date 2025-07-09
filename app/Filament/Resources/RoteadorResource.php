@@ -31,15 +31,6 @@ class RoteadorResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Informações do Roteador')
                     ->schema([
-                        Forms\Components\TextInput::make('nome')
-                            ->label('Nome')
-                            ->required()
-                            ->maxLength(255),
-                        Forms\Components\TextInput::make('ip_address')
-                            ->label('Endereço IP')
-                            ->required()
-                            ->ipv4()
-                            ->unique(ignoreRecord: true),
                         Forms\Components\TextInput::make('modelo')
                             ->label('Modelo')
                             ->required()
@@ -48,20 +39,15 @@ class RoteadorResource extends Resource
                             ->label('Fabricante')
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\Select::make('status')
-                            ->label('Status')
-                            ->options([
-                                'ativo' => 'Ativo',
-                                'inativo' => 'Inativo',
-                                'manutencao' => 'Manutenção',
-                            ])
-                            ->required(),
-                        Forms\Components\TextInput::make('localizacao')
-                            ->label('Localização')
-                            ->maxLength(255),
                         Forms\Components\Textarea::make('descricao')
                             ->label('Descrição')
                             ->rows(3),
+                        Forms\Components\Textarea::make('dicas_configuracao')
+                            ->label('Dicas de Configuração')
+                            ->rows(2),
+                        Forms\Components\Textarea::make('anotacoes')
+                            ->label('Anotações')
+                            ->rows(2),
                     ])
                     ->columns(2)
             ]);
@@ -71,14 +57,6 @@ class RoteadorResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nome')
-                    ->label('Nome')
-                    ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('ip_address')
-                    ->label('IP')
-                    ->searchable()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('modelo')
                     ->label('Modelo')
                     ->searchable()
@@ -87,17 +65,15 @@ class RoteadorResource extends Resource
                     ->label('Fabricante')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\BadgeColumn::make('status')
-                    ->label('Status')
-                    ->colors([
-                        'success' => 'ativo',
-                        'danger' => 'inativo',
-                        'warning' => 'manutencao',
-                    ]),
-                Tables\Columns\TextColumn::make('localizacao')
-                    ->label('Localização')
-                    ->searchable()
-                    ->toggleable(),
+                Tables\Columns\TextColumn::make('descricao')
+                    ->label('Descrição')
+                    ->limit(40),
+                Tables\Columns\TextColumn::make('dicas_configuracao')
+                    ->label('Dicas de Configuração')
+                    ->limit(40),
+                Tables\Columns\TextColumn::make('anotacoes')
+                    ->label('Anotações')
+                    ->limit(40),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Data de Criação')
                     ->dateTime('d/m/Y H:i')
